@@ -1,0 +1,20 @@
+<mat-card class="mb-4">
+    <mat-card-content >
+        
+      <h2> {{prodobj.Pname}} </h2>
+    </mat-card-content>
+    <mat-card-content >
+      <p>
+        You have Ordered {{prodobj.Pname}} and its status is
+        {{prodobj.Pstatus}}
+      </p>
+    </mat-card-content>
+    <mat-card-content>
+      <!-- <button class="btn btn-primary" (click)="OnStatusChange(prodobj.id, allproductstatus.Inprogress)"> In progress</button>
+      <button class="btn btn-primary mx-4" (click)="OnStatusChange(prodobj.id, allproductstatus.Dispached)"> Dispached</button>
+      <button class="btn btn-primary" (click)="OnStatusChange(prodobj.id, allproductstatus.Delivered)"> Delivered</button> -->
+      <button mat-raised-button color="primary" (click)="OnStatusChange(prodobj, allproductstatus.Inprogress)">In progress</button>
+      <button mat-raised-button color="primary" class="mx-4" (click)="OnStatusChange(prodobj, allproductstatus.Dispached)">Dispached</button>
+      <button mat-raised-button color="primary" (click)="OnStatusChange(prodobj, allproductstatus.Delivered)">Delivered</button>
+    </mat-card-content>
+  </mat-card>
